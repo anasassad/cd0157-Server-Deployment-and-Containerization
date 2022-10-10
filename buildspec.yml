@@ -37,6 +37,9 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' simple_jwt_api.yml
         - $(aws ecr get-login --no-include-email)
         - export KUBECONFIG=$HOME/.kube/config
+        - export AWS_ACCESS_KEY_ID=AKIA6MQJ7W3XBV5Z4N4H
+        - export AWS_SECRET_ACCESS_KEY=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
+        - export AWS_DEFAULT_REGION=us-east-2
         - echo `ls -l`
         - pip3 install -r requirements.txt 
         - python3 -m pytest test_main.py
