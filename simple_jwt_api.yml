@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: simple-jwt-api
-          image: public.ecr.aws/sam/build-python3.7:latest
+          image: mySimpleImg
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
