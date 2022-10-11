@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: simple-jwt-api
-          image: mySimpleImage
+          image: 988937172718.dkr.ecr.us-east-2.amazonaws.com/myfinalstack-ecrdockerrepository-k4bkfz7y78xo:cd0157-Server-Deployment-and-Containerization.master..2022-10-11.12.08.20.379f1d0b
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
