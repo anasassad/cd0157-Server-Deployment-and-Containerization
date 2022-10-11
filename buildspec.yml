@@ -41,6 +41,7 @@ phases:
         - export AWS_SECRET_ACCESS_KEY=7Uj9yyd0N9QgiohjdCIlt25ySMui5btLkQ2gcM0K
         - export AWS_DEFAULT_REGION=us-east-2
         - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
+        - aws configure list
         - echo `ls -l`
         - pip3 install -r requirements.txt 
         - python3 -m pytest test_main.py
