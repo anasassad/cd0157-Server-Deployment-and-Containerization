@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: simple-jwt-api
-          image: aws/codebuild/standard:4.0
+          image: public.ecr.aws/sam/build-python3.7:latest
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
