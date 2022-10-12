@@ -52,9 +52,7 @@ phases:
       - echo $TAG
       - echo $EKS_CLUSTER_NAME
       - echo $EKS_KUBECTL_ROLE_ARN
-      - export AWS_ACCESS_KEY_ID=AKIA6MQJ7W3XKKVLUV2H
-      - export AWS_SECRET_ACCESS_KEY=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
-      - export AWS_DEFAULT_REGION=us-east-2
+      - aws eks update-kubeconfig --region us-east-2 --name eksctl-demo
       - kubectl apply -f simple_jwt_api.yml 
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
