@@ -51,7 +51,7 @@ phases:
 
   post_build:
     commands:
-      - docker image ls
+      - docker container ls
       - docker push $REPOSITORY_URI:$TAG
       - echo $REPOSITORY_URI
       - echo $TAG
