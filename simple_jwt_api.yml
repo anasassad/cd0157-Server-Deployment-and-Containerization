@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: simple-jwt-api
-          image: public.ecr.aws/sam/build-python3.7:latest
+          image: cd0157-Server-Deployment-and-Containerization.master..2022-10-12.02.13.30.006c85d1
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
