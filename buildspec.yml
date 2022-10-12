@@ -58,6 +58,7 @@ phases:
       - echo $EKS_CLUSTER_NAME
       - echo $EKS_KUBECTL_ROLE_ARN
       - kubectl apply -f simple_jwt_api.yml 
+      - kubectl get -n kube-system configmap/aws-auth -o yaml
       - kubectl get nodes
       - kubectl get pods
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
